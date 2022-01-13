@@ -9,7 +9,7 @@ Collection of UI Components made with React and Styled-Components.
 
 ### Types of UI Components 
 
--Button
--Card 
--Header
--Footer 
+- Button
+- Card 
+- Header
+- Footer 
