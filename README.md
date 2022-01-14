@@ -23,3 +23,7 @@ Collection of UI Components made with React and Styled-Components.
 ### Types of UI Animations 
 
 - FadeIn
+
+### Types of UI Sections
+
+- Hero
