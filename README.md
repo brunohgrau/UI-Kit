@@ -6,6 +6,7 @@ Collection of UI Components made with React and Styled-Components.
 
 - React
 - Styled-Components
+- React-Spring
 
 ### Types of UI Components 
 
@@ -18,3 +19,7 @@ Collection of UI Components made with React and Styled-Components.
 ### Types of UI Primitives 
 
 - Input
+
+### Types of UI Animations 
+
+- FadeIn
