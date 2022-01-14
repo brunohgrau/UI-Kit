@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const SectionWrapper = styled.section`
+// Wrapper
+
+const Wrapper = styled.section`
   /* box model */
   max-width: 14rem;
   margin-left: auto;
@@ -18,13 +20,15 @@ const SectionWrapper = styled.section`
   overflow: hidden;
 `;
 
-const SectionHeader = styled.h1`
+// Container
+
+const HeaderContainer = styled.h1`
   /* display */
   display: flex;
   justify-content: center;
 
   /* box model */
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   /*   typography */
   font-size: 1.5rem;
@@ -33,92 +37,111 @@ const SectionHeader = styled.h1`
   text-transform: capitalize;
 `;
 
-const FormWrapper = styled.form`
+const FormContainer = styled.form`
   /*  sm:grid-cols-2 */
 
   /* display */
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   /* box model */
-  margin-top: 1rem;
+  width: 100%;
 `;
 
-const InputLabel = styled.label`
-  /* box model */
-  margin-top: 1rem;
-
-  font-size: 1rem;
-  line-height: 1.75rem;
-`;
-const InputField = styled.input`
-  /* display */
-  display: block;
-  /* position */
-  /* box model */
-  width: full;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  background-color: rgb(255 255 255);
-  /* typography */
-  /* manipulation */
-  /* misc */
-  border-width: 1px;
-  border-color: rgb(229 231 235);
-  border-radius: 0.375rem;
-`;
-
-const ButtonParent = styled.div`
+const ButtonContainer = styled.div`
   /* display */
   display: flex;
   justify-content: center;
+  /* box model */
+  margin-top: 1.5rem;
 `;
+
+// Secondary
+
+const StyledInput = styled.input`
+  /* display */
+  display: block;
+  /* box model */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+
+  background-color: rgb(255 255 255);
+  /* typography */
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  /* manipulation */
+  &:hover {
+    background: rgb(229 231 235);
+  }
+
+  &:focus {
+    outline: none;
+  }
+  /* misc */
+
+  border: 2px solid rgb(229 231 235);
+  border-radius: 1rem;
+`;
+
+const StyledButton = styled.button`
+  /* class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" */
+
+  /* box model */
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  /* typography */
+  font-family: "Montserrat", sans-serif;
+  color: rgb(55 65 81);
+  line-height: 28px;
+  font-size: 0.93rem;
+  font-weight: 600;
+  /* manipulation */
+
+  &:hover {
+    background: rgb(229 231 235);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.tablet}) {
+    position: absolute;
+    top: 5px;
+    width: 200px;
+    right: 3px;
+  }
+
+  /* misc */
+  border: 2px solid rgb(229 231 235);
+  border-radius: 2rem;
+`;
+
+// Utils
 
 const SimpleForm = () => {
   return (
     <>
-      <SectionWrapper>
-        <SectionHeader class="text-gray-700 ">Account settings</SectionHeader>
-        <FormWrapper>
+      <Wrapper>
+        <HeaderContainer class="text-gray-700 ">Login</HeaderContainer>
+        <FormContainer>
           <div>
-            <InputLabel for="username">Username</InputLabel>
-            <InputField
-              id="username"
-              type="text"
-              class=" text-gray-700    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-            />
+            <StyledInput id="username" type="text" placeholder="Username" />
           </div>
           <div>
-            <InputLabel for="username">Email</InputLabel>
-            <InputField
-              id="username"
-              type="text"
-              class=" text-gray-700    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-            />
+            <StyledInput id="username" type="text" placeholder="Email" />
           </div>
           <div>
-            <InputLabel for="username">Password</InputLabel>
-            <InputField
-              id="username"
-              type="text"
-              class=" text-gray-700    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-            />
+            <StyledInput id="username" type="text" placeholder="Password" />
           </div>
-          <div>
-            <InputLabel for="username">Password Confirmation</InputLabel>
-            <InputField
-              id="username"
-              type="text"
-              class=" text-gray-700    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-            />
-          </div>
-          <ButtonParent class="flex justify-end mt-6">
-            <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-              Save
-            </button>
-          </ButtonParent>
-        </FormWrapper>
-      </SectionWrapper>
+
+          <ButtonContainer>
+            <StyledButton>Save</StyledButton>
+          </ButtonContainer>
+        </FormContainer>
+      </Wrapper>
     </>
   );
 };

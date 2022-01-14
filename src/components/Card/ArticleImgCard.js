@@ -1,24 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  /* max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md  */
+// Wrapper
 
+const Wrapper = styled.div`
   /* box model */
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(255 255 255);
-
   /*   typography */
   font-family: "Montserrat", sans-serif;
-
   /* misc */
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   overflow: hidden;
 `;
 
+// Container
 const ImageContainer = styled.img`
   object-fit: cover;
   width: 100%;
@@ -30,7 +29,9 @@ const TextContainer = styled.div`
   padding: 1.25rem;
 `;
 
-const TextSpan = styled.span`
+// Secondary
+
+const StyledSpan = styled.span`
   /* typography */
   font-size: 0.75rem;
   line-height: 0.75rem;
@@ -38,11 +39,9 @@ const TextSpan = styled.span`
   color: rgb(107 114 128);
 `;
 
-const TextHeader = styled.h2`
+const StyledHeader = styled.h2`
   /* display */
   display: block;
-
-  /* position */
   /* box model */
   margin-top: 1rem;
   /* typography */
@@ -51,10 +50,12 @@ const TextHeader = styled.h2`
   text-decoration: none;
 `;
 
-const TextParagraph = styled.p`
+const StyledParagraph = styled.p`
   font-size: 0.75rem;
   line-height: 1.5rem;
 `;
+
+// Utils
 
 const ArticleImgCard = () => {
   return (
@@ -68,14 +69,14 @@ const ArticleImgCard = () => {
 
         <TextContainer>
           <div>
-            <TextSpan>Category</TextSpan>
-            <TextHeader>Title</TextHeader>
-            <TextParagraph>
+            <StyledSpan>Category</StyledSpan>
+            <StyledHeader>Title</StyledHeader>
+            <StyledParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
               parturient et sem ipsum volutpat vel. Natoque sem et aliquam
               mauris egestas quam volutpat viverra. In pretium nec senectus
               erat. Et malesuada lobortis.
-            </TextParagraph>
+            </StyledParagraph>
           </div>
         </TextContainer>
       </Wrapper>
