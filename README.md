@@ -13,3 +13,8 @@ Collection of UI Components made with React and Styled-Components.
 - Card 
 - Header
 - Footer 
+- Alert
+
+### Types of UI Primitives 
+
+- Input
