@@ -37,7 +37,7 @@ const ButtonContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: -0.25rem;
-  margin-bottom: -0.5rem;
+
   /* box model */
   background-color: rgb(17 24 39);
   padding: 0.5rem 1rem;

@@ -37,7 +37,7 @@ const PrimaryContainer = styled.nav`
   padding-bottom: 0.25rem;
   padding-left: 1rem;
   /* manipulation */
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (min-width: 695px) {
     display: flex;
   }
   /* misc */
@@ -57,7 +57,7 @@ const SocialContainer = styled.div`
   line-height: 1.5rem;
 
   /* manipulation */
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (min-width: 695px) {
     display: flex;
   }
 
@@ -81,7 +81,7 @@ const HamburgerButtonContainer = styled.button`
   font-size: 1.25rem;
   line-height: 1;
   /* manipulation */
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (min-width: 695px) {
     display: none;
   }
   /* misc */

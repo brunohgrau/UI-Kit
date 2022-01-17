@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const ImageContainer = styled.img`
   object-fit: cover;
   width: 100%;
-  height: 16rem;
+  height: 8rem;
 `;
 
 const TextContainer = styled.div`
@@ -73,9 +73,7 @@ const ArticleImgCard = () => {
             <StyledHeader>Title</StyledHeader>
             <StyledParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
-              parturient et sem ipsum volutpat vel. Natoque sem et aliquam
-              mauris egestas quam volutpat viverra. In pretium nec senectus
-              erat. Et malesuada lobortis.
+              parturient et sem ipsum volutpat vel.
             </StyledParagraph>
           </div>
         </TextContainer>
