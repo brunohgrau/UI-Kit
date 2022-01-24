@@ -1,12 +1,10 @@
 import React from "react";
-import ArticleCard from "../components/Card/ArticleCard";
-import ArticleImgCard from "../components/Card/ArticleImgCard";
 import ProductCard from "../components/Card/ProductCard";
-import UserCard from "../components/Card/UserCard";
+import RPGCard from "../components/Card/RPGCard";
 
 export default {
   title: "Components/Card",
-  component: ArticleCard,
+  component: ProductCard,
   argTypes: { onClick: { action: "clicked" } }
   // parameters: {
   //   actions: {
@@ -15,18 +13,8 @@ export default {
   // }
 };
 
-export const Article = ({ label, ...args }) => (
-  <ArticleCard {...args}>{label}</ArticleCard>
-);
-
-export const ArticleImg = ({ label, ...args }) => (
-  <ArticleImgCard {...args}>{label}</ArticleImgCard>
-);
-
 export const Product = ({ label, ...args }) => (
   <ProductCard {...args}>{label}</ProductCard>
 );
 
-export const User = ({ label, ...args }) => (
-  <UserCard {...args}>{label}</UserCard>
-);
+export const RPG = ({ label, ...args }) => <RPGCard {...args}>{label}</RPGCard>;

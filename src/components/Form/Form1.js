@@ -1,21 +1,88 @@
 import React from "react";
 import styled from "styled-components";
 
-// Wrapper
+// Utils
 
-const Wrapper = styled.div`
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
   font-family: "Lato", sans-serif;
-  /*   background: linear-gradient(120deg, #9eabe4, #77eed8); */
-  height: 100vh;
-  overflow: hidden;
 `;
 
 // Container
 
-const TextContainer = styled.div`
+const FormContainer = styled.form`
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  font-family: "Lato", sans-serif;
+
+  > h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  > div {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  > input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background-color: rgb(14 165 233);
+    border-radius: 1.75rem;
+    font-size: 18px;
+    color: rgb(255 255 255);
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      border-color: rgb(14 165 233);
+      transition: 0.5s;
+    }
+  }
+
+  > p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  > p > a {
+    text-decoration: none;
+    color: rgb(14 165 233);
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 414px) {
+    width: 25rem;
+  }
+`;
+
+// Boxes
+
+const InputBox = styled.div`
   position: relative;
   border-bottom: 2px solid #adadad;
-  margin: 2rem 0;
+  margin: 2rem;
 
   > input {
     width: 100%;
@@ -69,99 +136,29 @@ const TextContainer = styled.div`
 
 //Secondary
 
-const StyledDiv = styled.div`
-  margin: -5px 0 20px 5px;
-  color: #a6a6a6;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-const StyledInputSubmit = styled.input`
-  width: 100%;
-  height: 50px;
-  border: 1px solid;
-  background-color: rgb(14 165 233);
-  border-radius: 1.75rem;
-  font-size: 18px;
-  color: rgb(255 255 255);
-  font-weight: 700;
-  cursor: pointer;
-  outline: none;
-
-  &:hover {
-    border-color: rgb(14 165 233);
-    transition: 0.5s;
-  }
-`;
-const StyledSignup = styled.div`
-  margin: 30px 0;
-  text-align: center;
-  font-size: 1rem;
-`;
-const StyledSignupLink = styled.a`
-  text-decoration: none;
-  color: rgb(14 165 233);
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-// Utils
-
-const Center = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20rem;
-  background: white;
-  border-radius: 0.75rem;
-  padding-top: 1rem;
-
-  > h1 {
-    text-align: center;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid silver;
-  }
-
-  > form {
-    margin-top: 1rem;
-    padding: 0 40px;
-  }
-
-  @media (min-width: 414px) {
-    width: 25rem;
-  }
-`;
-
 const Form1 = () => {
   return (
     <>
-      <Wrapper>
-        <Center>
+      <Center>
+        <FormContainer>
           <h1>Login</h1>
-          <form action="">
-            <TextContainer>
-              <input type="text" required />
-              <span> </span>
-              <label htmlFor="">Username</label>
-            </TextContainer>
-            <TextContainer>
-              <input type="password" required />
-              <span> </span>
-              <label htmlFor="">Password</label>
-            </TextContainer>
-            <StyledDiv> Forgot Password?</StyledDiv>
-            <StyledInputSubmit type="submit" value="Login" />
-            <StyledSignup>
-              Not a member? <StyledSignupLink> Signup </StyledSignupLink>
-            </StyledSignup>
-          </form>
-        </Center>
-      </Wrapper>
+          <InputBox>
+            <input type="text" required />
+            <span> </span>
+            <label htmlFor="">Username</label>
+          </InputBox>
+          <InputBox>
+            <input type="password" required />
+            <span> </span>
+            <label htmlFor="">Password</label>
+          </InputBox>
+          <div> Forgot Password?</div>
+          <input type="submit" value="Login" />
+          <p>
+            Not a member? <a> Signup </a>
+          </p>
+        </FormContainer>
+      </Center>
     </>
   );
 };
