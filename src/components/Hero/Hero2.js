@@ -1,28 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import Img1 from "../../assets/bg-pattern-1.svg";
-import Logo from "../../assets/logo.svg";
 
 const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2rem 1rem;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
   font-family: "Lato", sans-serif;
 
   @media screen and (min-width: 695px) {
-    padding: 4rem 2rem;
     flex-direction: row;
+    padding: 4rem 2rem;
   }
 `;
 
 const LeftBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
   align-items: center;
+  margin-bottom: 4rem;
   text-align: center;
 
   @media screen and (min-width: 695px) {
@@ -30,7 +28,6 @@ const LeftBox = styled.div`
     width: 50%;
     padding-right: 4rem;
     margin-bottom: 0px;
-    justify-content: start;
     text-align: left;
   }
 

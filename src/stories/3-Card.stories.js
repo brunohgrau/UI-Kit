@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "../components/Card/ProductCard";
 import RPGCard from "../components/Card/RPGCard";
+import ProfileCard from "../components/Card/ProfileCard";
 
 export default {
   title: "Components/Card",
@@ -18,3 +19,6 @@ export const Product = ({ label, ...args }) => (
 );
 
 export const RPG = ({ label, ...args }) => <RPGCard {...args}>{label}</RPGCard>;
+export const Profile = ({ label, ...args }) => (
+  <ProfileCard {...args}>{label}</ProfileCard>
+);

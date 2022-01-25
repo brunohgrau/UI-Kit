@@ -35,7 +35,7 @@ const Stack = styled.div`
 
 const SplitPrimitive = () => {
   return (
-    <Split fraction="auto-start" gutter="lg">
+    <Split fraction="1/2" gutter="xxl">
       <div>
         <h2>Personal Information</h2>
         <span>The information you provide will be displayed publicly.</span>
