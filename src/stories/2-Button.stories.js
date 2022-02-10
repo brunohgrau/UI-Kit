@@ -4,33 +4,41 @@ import OutlineButton from "../components/Button/OutlineButton";
 import PrimaryButton from "../components/Button/PrimaryButton";
 
 export default {
-  title: "Components/Button",
-  component: IconButton,
-  argTypes: { onClick: { action: "clicked" } }
-  // parameters: {
-  //   actions: {
-  //     handles: ["mouseover", "click"]
-  //   }
-  // }
+  title: "Components/Buttons",
+  component: PrimaryButton,
+  parameters: {
+    docs: {
+      description: {
+        component: " A Button  is used to trigger an action or event"
+      }
+    }
+  }
 };
 
-export const Icon = ({ label, ...args }) => (
-  <IconButton {...args}>{label}</IconButton>
-);
-Text.args = {
-  label: "Button"
+const Template = (args) => <PrimaryButton {...args} />;
+export const Primary1 = Template.bind({});
+Primary1.args = {
+  buttonColor: "#00baff",
+  hoverColor: "#09a4e6",
+  borderRadius: "0.375rem",
+  fontSize: "1.125rem"
 };
 
-export const Outline = ({ label, ...args }) => (
-  <OutlineButton {...args}>{label}</OutlineButton>
-);
-Text.args = {
-  label: "Button"
+const Template2 = (args) => <IconButton {...args} />;
+export const Icon = Template2.bind({});
+Icon.args = {
+  hoverColor: "black",
+  buttonColor: "#09a4e6",
+  borderRadius: "0.375rem",
+  fontSize: "1.125rem",
+  textColor: "white"
 };
 
-export const Primary = ({ label, ...args }) => (
-  <PrimaryButton {...args}>{label}</PrimaryButton>
-);
-Text.args = {
-  label: "Button"
+const Template3 = (args) => <OutlineButton {...args} />;
+export const Outline = Template3.bind({});
+Outline.args = {
+  buttonColor: "#00baff",
+  hoverColor: "gray",
+  borderRadius: "0.375rem",
+  fontSize: "1.125rem"
 };

@@ -2,22 +2,25 @@ import React from "react";
 import Form1 from "../components/Form/Form1";
 import Form2 from "../components/Form/Form2";
 import Form3 from "../components/Form/Form3";
+import Form4 from "../components/Form/Form4";
 
 export default {
-  title: "Sections/Form",
-  component: Form1,
-  argTypes: { onClick: { action: "clicked" } }
-  // parameters: {
-  //   actions: {
-  //     handles: ["mouseover", "click"]
-  //   }
-  // }
+  title: "Components/Form",
+  component: Form1
 };
 
-export const Form = ({ label, ...args }) => <Form1 {...args}>{label}</Form1>;
+const Template = (args) => <Form1 {...args} />;
+export const FormOne = Template.bind({});
+FormOne.args = {};
 
-export const FormTwo = ({ label, ...args }) => <Form2 {...args}>{label}</Form2>;
+const Template2 = (args) => <Form2 {...args} />;
+export const FormTwo = Template2.bind({});
+FormTwo.args = {};
 
-export const FormThree = ({ label, ...args }) => (
-  <Form3 {...args}>{label}</Form3>
-);
+const Template3 = (args) => <Form3 {...args} />;
+export const FormThree = Template3.bind({});
+FormThree.args = {};
+
+const Template4 = (args) => <Form4 {...args} />;
+export const FormFour = Template4.bind({});
+FormFour.args = {};

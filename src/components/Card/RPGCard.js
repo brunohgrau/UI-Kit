@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import shoes from "../../assets/shoes.png";
-
-// Util
 
 const Center = styled.div`
   display: flex;
@@ -11,12 +8,10 @@ const Center = styled.div`
   font-family: "Lato", sans-serif;
 `;
 
-// Container
-const Element = styled.div`
+const CardContainer = styled.div`
   position: relative;
   width: 320px;
-  height: 500px;
-
+  height: 440px;
   border-radius: 20px;
   overflow: hidden;
 
@@ -29,26 +24,26 @@ const Element = styled.div`
   cursor: pointer;
 `;
 
-// Box
-
-const Frame = styled.div`
+const ImageContainer = styled.div`
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 
   > img {
     background-size: cover;
-    width: 320px;
-    height: 210px;
+    width: 100%;
+    height: 150px;
   }
 `;
 
-const Stack = styled.div`
-  width: 100%;
-  height: 210px;
-  padding: 1.5rem;
+const ContentContainer = styled.div`
+  /* Stack */
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  height: 210px;
+  padding: 1.5rem;
 
   > span {
     color: rgb(14 165 233);
@@ -69,19 +64,19 @@ const Stack = styled.div`
   }
 `;
 
-const Cluster = styled.div`
-  height: 80px;
+const FooterContainer = styled.div`
+  /* Cluster */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  height: 80px;
+
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background: rgb(14 165 233);
 `;
 
-// Secondary
-
-const Stats = styled.div`
+const StatsContainer = styled.div`
+  /* Stack */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,38 +88,35 @@ const Stats = styled.div`
 
 // Utils
 
-const RPGCard = () => {
+const RPGCard = (props) => {
   return (
     <Center>
-      <Element>
-        <Frame>
+      <CardContainer>
+        <ImageContainer>
           <img src="https://images.unsplash.com/photo-1634068392184-afee320d6aa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM3fHJuU0tESHd3WVVrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=320&q=60" />
-        </Frame>
-        <Stack>
+        </ImageContainer>
+        <ContentContainer>
           <span class="date">4 days ago</span>
-          <h2>Post One</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
-            temporibus omnis illum maxime quod deserunt eligendi dolor
-          </p>
-        </Stack>
-        <Cluster>
-          <Stats>
+          <h2>{props.header}</h2>
+          <p>{props.paragraph}</p>
+        </ContentContainer>
+        <FooterContainer>
+          <StatsContainer>
             <div class="value">
               4<sup>m</sup>
             </div>
             <div class="type">read</div>
-          </Stats>
-          <Stats>
+          </StatsContainer>
+          <StatsContainer>
             <div class="value">5123</div>
             <div class="type">views</div>
-          </Stats>
-          <Stats>
+          </StatsContainer>
+          <StatsContainer>
             <div class="value">32</div>
             <div class="type">comments</div>
-          </Stats>
-        </Cluster>
-      </Element>
+          </StatsContainer>
+        </FooterContainer>
+      </CardContainer>
     </Center>
   );
 };

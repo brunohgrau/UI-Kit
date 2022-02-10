@@ -8,20 +8,13 @@ import {
 } from "react-icons/fa";
 import "../reset.css";
 
-// Wrapper
-
-const Wrapper = styled.footer`
-  background-color: rgb(14 165 233);
-  padding: 70px;
-  font-family: "Lato", sans-serif;
-  line-height: 1.5rem;
-`;
-
-// Container
-
 const FooterContainer = styled.div`
   max-width: 1170px;
   margin: auto;
+  padding: 4rem;
+  background-color: ${(props) => props.footerBackground || "#00baff"};
+  font-family: "Lato", sans-serif;
+  line-height: 1.5rem;
 `;
 const RowContainer = styled.div`
   display: flex;
@@ -32,16 +25,14 @@ const ColContainer = styled.div`
   margin-top: 2rem;
   @media (min-width: 500px) {
     width: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 1110px) {
     width: 25%;
-    padding: 0 15px;
+    padding: 0 1rem;
   }
 `;
-
-// Secondary
 
 const StyledHeader = styled.h4`
   font-size: 1.25rem;
@@ -102,84 +93,82 @@ const StyledSocialLinks = styled.div`
   }
 `;
 
-const Footer1 = () => {
+const Footer1 = (props) => {
   return (
     <>
-      <Wrapper>
-        <FooterContainer>
-          <RowContainer>
-            <ColContainer>
-              <StyledHeader>Company</StyledHeader>
-              <ul>
-                <StyledListItem>
-                  <StyledLink href="#">about us</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">our services</StyledLink>
-                </StyledListItem>
+      <FooterContainer footerBackground={props.footerBackground}>
+        <RowContainer>
+          <ColContainer>
+            <StyledHeader>Company</StyledHeader>
+            <ul>
+              <StyledListItem>
+                <StyledLink href="#">about us</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">our services</StyledLink>
+              </StyledListItem>
 
-                <StyledListItem>
-                  <StyledLink href="#">affiliate program</StyledLink>
-                </StyledListItem>
-              </ul>
-            </ColContainer>
-            <ColContainer>
-              <StyledHeader>Get Help</StyledHeader>
-              <ul>
-                <StyledListItem>
-                  <StyledLink href="#">FAQ</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">shipping</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">returns</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">order status</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">payment options</StyledLink>
-                </StyledListItem>
-              </ul>
-            </ColContainer>
-            <ColContainer>
-              <StyledHeader>Online Shop</StyledHeader>
-              <ul>
-                <StyledListItem>
-                  <StyledLink href="#">watch</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">bag</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">shoes</StyledLink>
-                </StyledListItem>
-                <StyledListItem>
-                  <StyledLink href="#">dress</StyledLink>
-                </StyledListItem>
-              </ul>
-            </ColContainer>
-            <ColContainer>
-              <StyledHeader>Follow Us </StyledHeader>
-              <div>
-                <StyledSocialLinks href="">
-                  <FaFacebookSquare />
-                </StyledSocialLinks>
-                <StyledSocialLinks href="">
-                  <FaTwitterSquare />
-                </StyledSocialLinks>
-                <StyledSocialLinks href="">
-                  <FaInstagramSquare />
-                </StyledSocialLinks>
-                <StyledSocialLinks href="">
-                  <FaLinkedin />
-                </StyledSocialLinks>
-              </div>
-            </ColContainer>
-          </RowContainer>
-        </FooterContainer>
-      </Wrapper>
+              <StyledListItem>
+                <StyledLink href="#">affiliate program</StyledLink>
+              </StyledListItem>
+            </ul>
+          </ColContainer>
+          <ColContainer>
+            <StyledHeader>Get Help</StyledHeader>
+            <ul>
+              <StyledListItem>
+                <StyledLink href="#">FAQ</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">shipping</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">returns</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">order status</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">payment options</StyledLink>
+              </StyledListItem>
+            </ul>
+          </ColContainer>
+          <ColContainer>
+            <StyledHeader>Online Shop</StyledHeader>
+            <ul>
+              <StyledListItem>
+                <StyledLink href="#">watch</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">bag</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">shoes</StyledLink>
+              </StyledListItem>
+              <StyledListItem>
+                <StyledLink href="#">dress</StyledLink>
+              </StyledListItem>
+            </ul>
+          </ColContainer>
+          <ColContainer>
+            <StyledHeader>Follow Us </StyledHeader>
+            <div>
+              <StyledSocialLinks href="">
+                <FaFacebookSquare />
+              </StyledSocialLinks>
+              <StyledSocialLinks href="">
+                <FaTwitterSquare />
+              </StyledSocialLinks>
+              <StyledSocialLinks href="">
+                <FaInstagramSquare />
+              </StyledSocialLinks>
+              <StyledSocialLinks href="">
+                <FaLinkedin />
+              </StyledSocialLinks>
+            </div>
+          </ColContainer>
+        </RowContainer>
+      </FooterContainer>
     </>
   );
 };

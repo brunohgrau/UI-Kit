@@ -55,7 +55,7 @@ const ImageContainer = styled.div`
   }
 `;
 
-const TextContainer = styled.div`
+const ContentContainer = styled.div`
   position: absolute;
   height: 200px;
   width: 100%;
@@ -117,7 +117,7 @@ const TextContainer = styled.div`
   }
 `;
 
-const LinkContainer = styled.div`
+const FooterContainer = styled.div`
   width: 100%;
   height: 50px;
   background: #f2f2f2;
@@ -192,7 +192,7 @@ const ProfileCard = () => {
         <a className="view-more" href="">
           <FaPlusCircle className="circle" />
         </a>
-        <TextContainer>
+        <ContentContainer>
           <div className="name">Joe Doe</div>
           <div className="description">
             Founder and Owner at <a href="https://facebook.com">Joe</a>
@@ -209,8 +209,8 @@ const ProfileCard = () => {
               70k<div className="subtext">Shares</div>
             </div>
           </div>
-        </TextContainer>
-        <LinkContainer>
+        </ContentContainer>
+        <FooterContainer>
           <a className="fb" href="">
             <FaFacebook />
           </a>
@@ -221,7 +221,7 @@ const ProfileCard = () => {
             <i className="fa fa-rocket" aria-hidden="true"></i>
             <FaLinkedinIn />
           </a>
-        </LinkContainer>
+        </FooterContainer>
       </CardContainer>
     </>
   );

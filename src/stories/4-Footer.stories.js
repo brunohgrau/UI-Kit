@@ -1,27 +1,26 @@
 import React from "react";
 import Footer1 from "../components/Footer/Footer1";
 import Footer2 from "../components/Footer/Footer2";
-import Footer3 from "../components/Footer/Footer3";
 
 export default {
   title: "Components/Footer",
   component: Footer1,
-  argTypes: { onClick: { action: "clicked" } }
-  // parameters: {
-  //   actions: {
-  //     handles: ["mouseover", "click"]
-  //   }
-  // }
+  parameters: {
+    layout: "fullscreen",
+    docs: {
+      description: {
+        component: "Navigation Footer"
+      }
+    }
+  }
 };
 
-export const Footer = ({ label, ...args }) => (
-  <Footer1 {...args}>{label}</Footer1>
-);
+const Template = (args) => <Footer1 {...args} />;
+export const Footer = Template.bind({});
+Footer.args = {
+  footerBackground: "#00baff"
+};
 
-export const FooterTwo = ({ label, ...args }) => (
-  <Footer2 {...args}>{label}</Footer2>
-);
-
-export const FooterThree = ({ label, ...args }) => (
-  <Footer3 {...args}>{label}</Footer3>
-);
+const Template2 = (args) => <Footer2 {...args} />;
+export const FooterTwo = Template2.bind({});
+Footer2.args = {};

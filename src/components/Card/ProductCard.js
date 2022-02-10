@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import shoes from "../../assets/shoes.png";
 
-// Utils
-
 const Center = styled.div`
   display: flex;
   justify-content: center;
@@ -11,8 +9,6 @@ const Center = styled.div`
   min-height: 100vh;
   font-family: "Lato", sans-serif;
 `;
-
-// Container
 
 const CardContainer = styled.div`
   position: relative;
@@ -49,7 +45,6 @@ const CardContainer = styled.div`
     color: rgba(255, 255, 255, 0.04);
   }
 `;
-// Box
 
 const ImageContainer = styled.div`
   position: absolute;
@@ -73,6 +68,7 @@ const ImageContainer = styled.div`
     width: 270px;
   }
 `;
+
 const TextContainer = styled.div`
   position: absolute;
   bottom: 4.5rem;
@@ -105,7 +101,6 @@ const TextContainer = styled.div`
     background: #9bdc28;
   }
 `;
-// Secondary
 
 const Size = styled.div`
   display: flex;
@@ -183,7 +178,7 @@ const Color = styled.div`
 
 // Utils
 
-const ProductCard = () => {
+const ProductCard = (props) => {
   return (
     <Center>
       <CardContainer>
@@ -191,7 +186,7 @@ const ProductCard = () => {
           <img src={shoes} />
         </ImageContainer>
         <TextContainer>
-          <h2>Nike Air</h2>
+          <h2>{props.header}</h2>
           <Size>
             <h3>Size :</h3>
             <span>7</span>

@@ -4,15 +4,26 @@ import Alert1 from "../components/Alert/Alert1";
 export default {
   title: "Components/Alert",
   component: Alert1,
-  argTypes: { onClick: { action: "clicked" } }
-  // parameters: {
-  //   actions: {
-  //     handles: ["mouseover", "click"]
-  //   }
-  // }
+  parameters: {
+    docs: {
+      description: {
+        component:
+          " Alerts are used to communicate a state that affects a system, feature or page."
+      }
+    }
+  }
 };
 
-export const Alert = ({ label, ...args }) => <Alert1 {...args}>{label}</Alert1>;
-Text.args = {
-  label: "Alert"
+const Template = (args) => <Alert1 {...args} />;
+export const Alert = Template.bind({});
+Alert.args = {
+  title: "Title",
+  description: "Description",
+  titleSize: "1rem",
+
+  spacing: "1rem",
+  borderRadius: "1rem",
+  svgColor: "#00baff",
+  titleColor: "#00baff",
+  descriptionColor: "#00baff"
 };
