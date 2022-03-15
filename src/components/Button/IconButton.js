@@ -1,16 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import AppleIcon from "../../assets/apple-icon.svg";
+import { blue } from "../../utils";
 
 export const PrimaryButton = styled.button`
   padding: 0.5rem 1rem;
-  background-color: ${(props) => props.buttonColor || "#09b7e6"};
+  /* background-color: ${(props) => props.buttonColor || "#09b7e6"}; */
+  background-color: ${blue[300]};
   font-size: ${(props) => props.fontSize || "1.125rem"};
   line-height: 1.75rem;
   letter-spacing: 0.025em;
-  color: ${(props) => props.textColor || "white"};
+  color: white;
   &:hover {
-    color: ${(props) => props.hoverColor || "black"};
+    /* color: ${(props) => props.hoverColor || "black"}; */
+    
+    background-color: ${blue[200]};
   }
   &:focus {
     outline: 3px solid rgb(59 130 246);

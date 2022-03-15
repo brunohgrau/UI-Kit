@@ -107,25 +107,14 @@ const SocialContainer = styled.div`
 `;
 
 const HamburgerButtonContainer = styled.button`
-  /*   className=" 
-                  rounded lg:outline-none focus:outline-none"
-                
- */
-
-  /* display */
   display: block;
-  /* position */
-  /* box model */
   padding: 0.25rem 0.75rem;
   background: rgb(255 255 255);
-  /* typography */
   font-size: 1.25rem;
   line-height: 1;
-  /* manipulation */
   @media screen and (min-width: 695px) {
     display: none;
   }
-  /* misc */
   cursor: pointer;
   border: none;
 `;
