@@ -4,7 +4,7 @@ import RPGCard from "../components/Card/RPGCard";
 import ProfileCard from "../components/Card/ProfileCard";
 
 export default {
-  title: "Components/Card",
+  title: "Molecules/Card",
   component: ProductCard,
   parameters: {
     docs: {

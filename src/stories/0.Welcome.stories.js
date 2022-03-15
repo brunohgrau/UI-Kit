@@ -13,4 +13,3 @@ export const ToStorybook = () => <Welcome1 />;
 ToStorybook.story = {
   name: "to Storybook"
 };
-

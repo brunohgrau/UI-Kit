@@ -5,7 +5,7 @@ import Header3 from "../components/Header/Header3";
 import Header4 from "../components/Header/Header4";
 
 export default {
-  title: "Components/Header",
+  title: "Organisms/Header",
   component: Header1,
   argTypes: { onClick: { action: "clicked" } },
   parameters: {

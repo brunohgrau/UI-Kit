@@ -4,7 +4,7 @@ import Input2 from "../components/Input/Input2";
 import Input3 from "../components/Input/Input3";
 
 export default {
-  title: "Components/Inputs",
+  title: "Atoms/Inputs",
   component: Input1,
   parameters: {
     layout: "fullscreen",

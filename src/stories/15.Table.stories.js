@@ -3,13 +3,13 @@ import Table1 from "../components/Table/Table1";
 import Table2 from "../components/Table/Table2";
 
 export default {
-  title: "Components/Table",
+  title: "Molecules/Table",
   component: Table1,
   parameters: {
     layout: "fullscreen",
     docs: {
       description: {
-        component: "Tables area used..."
+        component: "A table displays rows of data."
       }
     }
   }

@@ -2,7 +2,7 @@ import React from "react";
 import Tab1 from "../components/Tabs/Tab1";
 
 export default {
-  title: "Components/Tabs",
+  title: "Atoms/Tabs",
   component: Tab1,
   parameters: {
     layout: "fullscreen",

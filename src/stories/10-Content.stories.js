@@ -4,7 +4,7 @@ import Content2 from "../components/Content/Content2";
 import Content3 from "../components/Content/Content3";
 
 export default {
-  title: "Sections/Content",
+  title: "Organisms/Content",
   component: Content1,
   argTypes: { onClick: { action: "clicked" } },
   parameters: {

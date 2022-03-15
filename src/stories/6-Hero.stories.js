@@ -5,7 +5,7 @@ import Hero3 from "../components/Hero/Hero3";
 import Hero4 from "../components/Hero/Hero4";
 
 export default {
-  title: "Sections/Hero",
+  title: "Organisms/Hero",
   component: Hero1,
   argTypes: { onClick: { action: "clicked" } },
   parameters: {

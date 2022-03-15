@@ -3,7 +3,7 @@ import Footer1 from "../components/Footer/Footer1";
 import Footer2 from "../components/Footer/Footer2";
 
 export default {
-  title: "Components/Footer",
+  title: "Organisms/Footer",
   component: Footer1,
   parameters: {
     layout: "fullscreen",

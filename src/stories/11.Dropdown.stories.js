@@ -1,8 +1,9 @@
 import React from "react";
 import Dropdown1 from "../components/Dropdown/Dropdown1";
+import Dropdown2 from "../components/Dropdown/Dropdown2";
 
 export default {
-  title: "Components/Dropdown",
+  title: "Molecules/Dropdown",
   component: Dropdown1,
   parameters: {
     docs: {
@@ -21,3 +22,6 @@ Dropdown.args = {
   buttonText: "Dropdown",
   itemText: "Item"
 };
+
+const Template2 = (args) => <Dropdown2 {...args} onClick />;
+export const DropdownTwo = Template2.bind({});

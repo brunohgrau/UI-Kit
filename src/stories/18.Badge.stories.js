@@ -3,14 +3,15 @@ import Badge1 from "../components/Badge/Badge1";
 import Badge2 from "../components/Badge/Badge2";
 
 export default {
-  title: "Components/Badge",
+  title: "Atoms/Badge",
   component: Badge1,
   argTypes: { onClick: { action: "clicked" } },
   parameters: {
     layout: "fullscreen",
     docs: {
       description: {
-        component: "Badge is .. "
+        component:
+          "Badge is a small numerical value or status descriptor for UI elements."
       }
     }
   }

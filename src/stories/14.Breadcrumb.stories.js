@@ -1,8 +1,9 @@
 import React from "react";
 import Breadcrumb1 from "../components/Breadcrumbs/Breadcrumb1";
+import Breadcrumb2 from "../components/Breadcrumbs/Breadcrumb2";
 
 export default {
-  title: "Components/Breadcrumb",
+  title: "Molecules/Breadcrumb",
   component: Breadcrumb1,
   parameters: {
     layout: "fullscreen",
@@ -16,4 +17,6 @@ export default {
 
 const Template = (args) => <Breadcrumb1 {...args} />;
 export const Breadcrumb = Template.bind({});
-Breadcrumb.args = {};
+
+const Template2 = (args) => <Breadcrumb2 {...args} />;
+export const BreadcrumbTwo = Template2.bind({});

@@ -4,7 +4,7 @@ import OutlineButton from "../components/Button/OutlineButton";
 import PrimaryButton from "../components/Button/PrimaryButton";
 
 export default {
-  title: "Components/Buttons",
+  title: "Atoms/Buttons",
   component: PrimaryButton,
   parameters: {
     docs: {
@@ -26,13 +26,13 @@ Primary1.args = {
 
 const Template2 = (args) => <IconButton {...args} />;
 export const Icon = Template2.bind({});
-Icon.args = {
+/* Icon.args = {
   hoverColor: "black",
   buttonColor: "#09a4e6",
   borderRadius: "0.375rem",
   fontSize: "1.125rem",
   textColor: "white"
-};
+}; */
 
 const Template3 = (args) => <OutlineButton {...args} />;
 export const Outline = Template3.bind({});

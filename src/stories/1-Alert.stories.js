@@ -2,7 +2,7 @@ import React from "react";
 import Alert1 from "../components/Alert/Alert1";
 
 export default {
-  title: "Components/Alert",
+  title: "Molecules/Alert",
   component: Alert1,
   parameters: {
     docs: {
